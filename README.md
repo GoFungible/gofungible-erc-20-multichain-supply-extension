@@ -57,9 +57,9 @@ State of Arts
 
 Some token standards are created for a single chain
 
-	* ERC3643 - The Token Standard for RWA Tokenization
+	* ERC-3643 - The Token Standard for RWA Tokenization (Tokeny)
 
-	* ERC-7943: uRWA - Universal Real World Asset Interface
+	* ERC-7943: uRWA - Universal Real World Asset Interface (Brikken)
 
 Other providers focused on mutichain tokens:
 
@@ -71,7 +71,7 @@ Other providers focused on mutichain tokens:
 
 
 Specification
-----------
+-------------
 
 	Supply management across networks must be built-in and immutable
 
