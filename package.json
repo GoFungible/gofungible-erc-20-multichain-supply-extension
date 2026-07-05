@@ -1,5 +1,5 @@
 {
-  "name": "gofungible-interop-ierc20x",
+  "name": "gofungible-erc-20-multichain-supply-extension",
   "version": "1.0.0",
   "private": true,
 	"scripts": {
