@@ -2,7 +2,7 @@
 pragma solidity 0.8.30;
 
 /**
- * @dev Interface of the ERC-20 standard as defined in the ERC.
+ * @dev Cross networks supply interface
  */
 interface IERC20x {
 
