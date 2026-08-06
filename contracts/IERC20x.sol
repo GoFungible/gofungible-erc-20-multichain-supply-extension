@@ -31,7 +31,7 @@ interface IERC20x {
      *
      * Note that `value` may be zero.
      */
-    event TransferX(address indexed from, address indexed to, uint256 value);
+    event TransferX(uint32 toChain, address toAddress, uint256 amount);
 
     /**
      * @dev Moves a `value` amount of tokens from the caller's account to `to`.
@@ -40,7 +40,7 @@ interface IERC20x {
      *
      * Emits a {Transfer} event.
      */
-    function transferX(uint256 toChain, address toAddress, uint256 amount) external returns (bool);
+    function transferX(uint32 toChain, address toAddress, uint256 amount) external returns (bool);
 
 
 }
