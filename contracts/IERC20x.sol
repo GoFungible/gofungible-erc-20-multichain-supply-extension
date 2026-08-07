@@ -9,11 +9,11 @@ interface IERC20x {
 
 
 
-		event MasterChainUpdated(uint256 fromMasterChain, uint256 toMasterChain);
+		event MasterChainUpdated(uint32 fromMasterChain, uint32 toMasterChain);
 
-		function getMasterChain() external view returns (uint256);
+		function getMasterChain() external view returns (uint32);
 
-		function setMasterChain(uint256 masterChain_) external;
+		function setMasterChain(uint32 masterChain_) external;
 
 
 
