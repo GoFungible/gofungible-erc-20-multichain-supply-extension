@@ -2,7 +2,7 @@
   "name": "gofungible-erc-20-multichain-supply-extension",
   "version": "1.0.0",
   "private": true,
-	"scripts": {
+  "scripts": {
     "build": "npx solcjs --abi contracts/IERC20x.sol -o abi"
   },
   "devDependencies": {

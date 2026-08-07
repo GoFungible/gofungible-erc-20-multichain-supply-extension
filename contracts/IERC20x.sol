@@ -9,11 +9,11 @@ interface IERC20x {
 
 
 
-		event MasterChainUpdated(uint32 fromMasterChain, uint32 toMasterChain);
+		event MasterChainUpdated(uint256 fromMasterChain, uint256 toMasterChain);
 
-		function getMasterChain() external view returns (uint32);
+		function getMasterChain() external view returns (uint256);
 
-		function setMasterChain(uint32 masterChain_) external;
+		function setMasterChain(uint256 masterChain_) external;
 
 
 
@@ -31,7 +31,7 @@ interface IERC20x {
      *
      * Note that `value` may be zero.
      */
-    event TransferX(uint32 toChain, address toAddress, uint256 amount);
+    event TransferX(uint256 toChain, address toAddress, uint256 amount);
 
     /**
      * @dev Moves a `value` amount of tokens from the caller's account to `to`.
@@ -40,7 +40,7 @@ interface IERC20x {
      *
      * Emits a {Transfer} event.
      */
-    function transferX(uint32 toChain, address toAddress, uint256 amount) external returns (bool);
+    function transferX(uint256 toChain, address toAddress, uint256 amount) external returns (bool);
 
 
 }
