@@ -42,17 +42,15 @@ interface IERC20x {
 
 
 
+	/**
+	 * @dev provide the list of deployed chains for this multichain token
+	 */
+	function getChainSupplies() external view returns (uint256[] memory _supplies);
 
 	/**
 	 * @dev provide the list of deployed chains for this multichain token
 	 */
 	function getChainSupply(uint256 chainId) external view returns (uint256);
-
-	/**
-	 * @dev clone the list of supplies in new contracts from their counterpart
-	 */
-	function cloneSupplies(uint256 onChain, address onAddress) external;
-
 
 
 
