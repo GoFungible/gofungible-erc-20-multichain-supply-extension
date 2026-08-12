@@ -2,22 +2,13 @@
 pragma solidity 0.8.30;
 
 /**
- * @dev Cross networks supply interface
+ * @dev Multichain token perimeter interface
  */
 interface IERC20x {
 
-
-
-	/**
-	 * @dev Returns the value of tokens in existence.
-	 */
-	function globalSupply() external view returns (uint256);
-
-
-
-
-
-
+	// ************************************************************************************************
+	// ***************************************** Only Master ******************************************
+	// ************************************************************************************************
 	/**
 	 * @dev provide the list of deployed chains for this multichain token
 	 */
@@ -28,34 +19,14 @@ interface IERC20x {
 	 */
 	function getChainAddress(uint256 chainId) external view returns (address);
 
-
-
-
-
-	event MasterChainUpdated(uint256 fromMasterChain, uint256 toMasterChain);
-
-	function getMasterChain() external view returns (uint256);
-
-	function setMasterChain(uint256 masterChain_) external;
-
-
-
-
-
-	/**
-	 * @dev provide the list of deployed chains for this multichain token
-	 */
-	function getChainSupplies() external view returns (uint256[] memory _supplies);
-
 	/**
 	 * @dev provide the list of deployed chains for this multichain token
 	 */
 	function getChainSupply(uint256 chainId) external view returns (uint256);
 
-
-
-
-
+	// ************************************************************************************************
+	// ***************************************** All Chains *******************************************
+	// ************************************************************************************************
 	/**
 	 * @dev Emitted when `value` tokens are moved from one account (`from`) to
 	 * another (`to`).
@@ -72,6 +43,5 @@ interface IERC20x {
 	 * Emits a {Transfer} event.
 	 */
 	function transferX(uint256 toChain, address toAddress, uint256 amount) external returns (bool);
-
 
 }
