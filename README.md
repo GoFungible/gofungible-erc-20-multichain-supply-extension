@@ -26,6 +26,8 @@ Abstract
 
 Crosschain Token interface to explore supply as a guard of Tokens value.
 
+There are not multichain tokens today. There are tokens in different networks under the same name but nothing defines the perimeter of a multichain token.
+
 
 
 Motivation
@@ -33,7 +35,9 @@ Motivation
 
 In economic terms, the value of a token is paramount. The value is represented by price. To capture correct price we must address cross chain.
 
-Address the problem of cross-chain supply.
+Multichain token should be manage themselves without intervention of the issuer.
+
+Investor in Multichain token should know the perimeter and supply at any time.
 
 
 
@@ -49,6 +53,26 @@ Supply is the more important parameter in a token definition. Variation of the s
 Multichain tokens cannot control their cross supply. This brings problems and destroy decentralization.
 
 This standard proposes an exntension to control cross supply of multichain tokens that allows users know the boundaries of the token.
+
+
+Scope
+---------
+
+A multichain token must be a token on its own on any deployed chain.
+
+A multichain must define a token perimeter.
+
+A multichain token must allow adding / removing chains.
+
+A multichain token must provide addresses and supplies per deployed chain.
+
+No included:
+
+A referential implementation of multichain token could bring its cross chain transfer features (crosschain payments).
+
+A referential implementation of multichain token could bring its own bridging features or coudl rely in external bridges.
+
+A multichain token does not know what accounts belong to the same user in different network. This is a mission for wallets.
 
 
 
@@ -73,13 +97,7 @@ Other providers focused on mutichain tokens:
 Specification
 -------------
 
-	Supply management across networks must be built-in and immutable
 
-		* Add a global supply and a supplyPerChain map to an ERC-20
-
-		* totalSupply and globalSupply or chainSupply? Depends on what we want exchanges read
-
-		* add a transferX to transfer fetching from other chains
 
 
 
@@ -100,10 +118,6 @@ Implementation
 
     function networkkIds() external view returns (uint256);
 
-    function supply(unit256 networkId) public view virtual returns (uint256);
-
-    function globalSupply() external view returns (uint256);
-
 		// not needed
     function balanceOfX(address account) public view virtual returns (uint256);
 
@@ -116,7 +130,7 @@ Implementation
 Security Considerations
 ----------
 
-Global Supply must reliably aggregate distributed supplies.
+
 
 
 

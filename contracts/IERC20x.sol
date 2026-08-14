@@ -33,7 +33,8 @@ interface IERC20x {
 	 *
 	 * Note that `value` may be zero.
 	 */
-	event TransferX(uint256 toChain, address toAddress, uint256 amount);
+	// bridge
+	event Paid(uint256 toChain, address toAddress, uint256 amount);
 
 	/**
 	 * @dev Moves a `value` amount of tokens from the caller's account to `to`.
@@ -42,6 +43,28 @@ interface IERC20x {
 	 *
 	 * Emits a {Transfer} event.
 	 */
-	function transferX(uint256 toChain, address toAddress, uint256 amount) external returns (bool);
+
+	// bridge
+	function pay(uint256 toChain, address toAddress, uint256 amount) external returns (bool);
+
+	/**
+	 * @dev Emitted when `value` tokens are moved from one account (`from`) to
+	 * another (`to`).
+	 *
+	 * Note that `value` may be zero.
+	 */
+	// bridge
+	event Bridged(uint256 toChain, address toAddress, uint256 amount);
+
+	/**
+	 * @dev Moves a `value` amount of tokens from the caller's account to `to`.
+	 *
+	 * Returns a boolean value indicating whether the operation succeeded.
+	 *
+	 * Emits a {Transfer} event.
+	 */
+
+	// bridge
+	function bridge(uint256 toChain, address toAddress, uint256 amount) external returns (bool);
 
 }
